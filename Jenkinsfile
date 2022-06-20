@@ -1,5 +1,7 @@
 node {
     def app
+    stage('SCM')
+    scm
         stage('Build image') {
         app = docker.build("sambhaji24/sam")
     }
