@@ -1,11 +1,6 @@
 node {
     def app
-
-    stage('Clone repository') {
-        checkout scm
-    }
-
-    stage('Build image') {
+        stage('Build image') {
         app = docker.build("sambhaji24/sam")
     }
 
